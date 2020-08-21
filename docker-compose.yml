@@ -6,6 +6,7 @@ services:
       container_name: ontopad_quitstore
       environment:
         - VIRTUAL_HOST=quit.ontopad.aksw.org
+        - VIRTUAL_PORT=8080
         - LETSENCRYPT_HOST=quit.ontopad.aksw.org
         - LETSENCRYPT_EMAIL=arndtn@gmail.com
         - QUIT_TARGETDIR=/data
@@ -17,6 +18,7 @@ services:
       container_name: ontopad_demo
       environment:
         - VIRTUAL_HOST=demo.ontopad.aksw.org
+        - VIRTUAL_PORT=8080
         - LETSENCRYPT_HOST=demo.ontopad.aksw.org
         - LETSENCRYPT_EMAIL=arndtn@gmail.com
         - QUIT_QUERY=https://quit.ontopad.aksw.org
