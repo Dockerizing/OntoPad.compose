@@ -1,9 +1,9 @@
-version: '3.7'
+version: '3.3'
 
 services:
     quitstore:
       image: aksw/quitstore
-      container_name: quitstore
+      container_name: ontopad_quitstore
       environment:
         - VIRTUAL_HOST=quit.ontopad.aksw.org
         - LETSENCRYPT_HOST=quit.ontopad.aksw.org
@@ -11,20 +11,16 @@ services:
         - QUIT_TARGETDIR=/data
       volumes:
         - data:/data
-      ports:
-        - 8082:8080
 
     ontopad:
       image: aksw/ontopad
-      container_name: ontopad
+      container_name: ontopad_demo
       environment:
         - VIRTUAL_HOST=demo.ontopad.aksw.org
         - LETSENCRYPT_HOST=demo.ontopad.aksw.org
         - LETSENCRYPT_EMAIL=arndtn@gmail.com
         - QUIT_QUERY=https://quit.ontopad.aksw.org
         - QUIT_UPDATE=https://quit.ontopad.aksw.org
-      ports:
-        - 8080:8080
 
 volumes:
     data: {}
