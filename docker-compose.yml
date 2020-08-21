@@ -12,6 +12,7 @@ services:
         - QUIT_TARGETDIR=/data
       volumes:
         - data:/data
+      network_mode: bridge
 
     ontopad:
       image: aksw/ontopad
@@ -23,6 +24,7 @@ services:
         - LETSENCRYPT_EMAIL=arndtn@gmail.com
         - QUIT_QUERY=https://quit.ontopad.aksw.org
         - QUIT_UPDATE=https://quit.ontopad.aksw.org
+      network_mode: bridge
 
 volumes:
     data: {}
