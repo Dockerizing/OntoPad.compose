@@ -4,6 +4,7 @@ services:
     quitstore:
       image: aksw/quitstore
       container_name: ontopad_quitstore
+      restart: unless-stopped
       environment:
         - VIRTUAL_HOST=quit.ontopad.aksw.org
         - VIRTUAL_PORT=8080
@@ -17,6 +18,7 @@ services:
     ontopad:
       image: aksw/ontopad
       container_name: ontopad_demo
+      restart: unless-stopped
       environment:
         - VIRTUAL_HOST=demo.ontopad.aksw.org
         - VIRTUAL_PORT=8080
