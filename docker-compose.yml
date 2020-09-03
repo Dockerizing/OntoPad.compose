@@ -24,8 +24,7 @@ services:
         - VIRTUAL_PORT=8080
         - LETSENCRYPT_HOST=demo.ontopad.aksw.org
         - LETSENCRYPT_EMAIL=arndtn@gmail.com
-        - QUIT_QUERY=https://quit.ontopad.aksw.org
-        - QUIT_UPDATE=https://quit.ontopad.aksw.org
+        - QUIT_URL=https://quit.ontopad.aksw.org
       network_mode: bridge
 
 volumes:
